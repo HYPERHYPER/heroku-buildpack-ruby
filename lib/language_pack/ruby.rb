@@ -627,6 +627,7 @@ ERROR
 
   # writes ERB based database.yml for Rails. The database.yml uses the DATABASE_URL from the environment during runtime.
   def create_database_yml
+    return
     instrument 'ruby.create_database_yml' do
       return false unless File.directory?("config")
       return false if  bundler.has_gem?('activerecord') && bundler.gem_version('activerecord') >= Gem::Version.new('4.1.0.beta1')
