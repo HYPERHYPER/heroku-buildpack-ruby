@@ -628,6 +628,7 @@ ERROR
   # writes ERB based database.yml for Rails. The database.yml uses the DATABASE_URL from the environment during runtime.
   def create_database_yml
     instrument 'ruby.create_database_yml' do
+      puts "AIN'T DOIN SHIT"
     end
   end
 
